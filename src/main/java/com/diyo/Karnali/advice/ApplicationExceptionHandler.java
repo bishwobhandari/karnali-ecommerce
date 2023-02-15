@@ -12,6 +12,8 @@ import java.util.Map;
 
 @RestControllerAdvice
 public class ApplicationExceptionHandler {
+
+
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(MethodArgumentNotValidException.class)
     Map<String, String> handleIllegalArgumentException(MethodArgumentNotValidException ex){
@@ -34,4 +36,3 @@ public class ApplicationExceptionHandler {
     }
 
 }
-
