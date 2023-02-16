@@ -51,6 +51,7 @@ public class OrderController {
     }
     @GetMapping("/all")
     public List<Order> createOroder(){
+        System.out.println("Changes to the code");
         return orderRepo.findAll();
     }
 }
