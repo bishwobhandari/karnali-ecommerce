@@ -7,11 +7,7 @@ import com.diyo.Karnali.repository.OrderRepository;
 import com.diyo.Karnali.repository.ProductRepository;
 import com.diyo.Karnali.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cglib.core.Local;
-import org.springframework.format.datetime.DateFormatter;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
-import org.springframework.http.ResponseEntity;
+
 import org.springframework.web.bind.annotation.*;
 
 import java.text.DateFormat;
@@ -53,10 +49,8 @@ public class OrderController {
     return order;
 
     }
-
     @GetMapping("/all")
     public List<Order> createOroder(){
-
         return orderRepo.findAll();
     }
 }

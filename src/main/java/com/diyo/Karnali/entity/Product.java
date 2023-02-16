@@ -1,7 +1,9 @@
 package com.diyo.Karnali.entity;
 
-import jakarta.persistence.*;
+//import jakarta.persistence.*;
 import lombok.*;
+
+import javax.persistence.*;
 
 @Entity
 @Getter

@@ -19,14 +19,11 @@ public class ProductController {
 
     @PostMapping("/create")
     public Product createProduct(@RequestBody Product product){
-
         return  productRepository.save(product);
-
     }
 
     @GetMapping("/all")
     public List<Product> getAllProducts(){
-
         return productRepository.findAll();
     }
 }
