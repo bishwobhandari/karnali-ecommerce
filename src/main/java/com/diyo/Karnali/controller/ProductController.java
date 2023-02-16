@@ -19,51 +19,16 @@ public class ProductController {
 
     @Autowired
     private ProductServiceImpl productService;
+
       @PostMapping("/save")
         public Product saveProduct(@RequestBody Product product){
             return productService.saveProduct(product);}
-          @GetMapping("/hello")
-          public ResponseEntity<String> createProduct(){
+     @GetMapping("/hello")
+        public ResponseEntity<String> createProduct(){
             return  new ResponseEntity<>("hello", HttpStatus.OK);
-
           }
-
-
-//          @PostMapping("/all")
-//          public List<Product> saveAll(@RequestBody List<Product> productList){
-//              return productService.saveAll(productList);
-//          }
-//
-//    @GetMapping("/all")
-//    public List<Product> getAllProducts(@PathVariable Product product){
-//        return productService.getAllProducts();
-//    }
-
-    //    }
-    //
-    //    @PostMapping("/all")
-    //    public List<Product> saveAll(@RequestBody List<Product> productList){
-    //        return productService.saveAll(productList);
-    //    }
-    //
-    //
-    //    @GetMapping("/list")
-    //    public List<Product> findAllProduct(){
-    //        return productService.getProducts();
-    //    }
-    //
-    //    @GetMapping("/{productId}")
-    //    public Product findProductById(@PathVariable Integer productId){
-    //        return productService.getProductById(productId);
-    //    }
-    //
-    //
-    //    @PutMapping("/updateProduct")
-    //    public Product updateProduct(@RequestBody Product product){
-    //        return productService.updateProduct(product);
-    //    }
-    //
-    //    @DeleteMapping("/deleteProduct/{id}")
-    //    public String deleteProduct(@PathVariable Integer productId){
-    //        return productService.deleteProduct(productId);
+    @GetMapping("/all")
+    public List<Product> getAllProducts(@PathVariable Product product){
+        return productService.getAllProducts(product);
+    }
 }
